@@ -1,0 +1,23 @@
+
+
+  div > abbr[title] {
+    color: blueviolet;
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline solid blue; /* 2 */
+  }
+
+  p > abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  [type="button"], 
+[type="reset"],
+[type="submit"] {
+    background-color: cyan;
+}
+:focus {
+    background-color: coral;
+}
+

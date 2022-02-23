@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo animaciones grid</title>
+    <style>
+        :root {
+            font-size: 5rem;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            border: 1px dotted blanchedalmond;
+            width: 60vw;
+            height: 50vh;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div {
+            border: inherit;
+            border-color: blueviolet;
+            width: 80%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 1rem;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes mover {
+            from {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                grid-row: 1/1;
+
+            }
+
+            10% {
+                grid-column-start: 2;
+                grid-column-end: 2;
+                grid-row: 2/2;
+            }
+
+            30% {
+                grid-column-start: 3;
+                grid-column-end: 3;
+                grid-row: 3/3;
+            }
+
+            40% {
+                grid-column-start: 4;
+                grid-column-end: 4;
+                grid-row: 4/4;
+            }
+
+            60% {
+                grid-column-start: 6;
+                grid-column-end: 6;
+                grid-row: 3/3;
+            }
+
+            80% {
+                grid-column-start: 7;
+                grid-column-end: 7;
+                grid-row: 2/2;
+            }
+
+            to {
+                grid-column-start: 8;
+                grid-column-end: 8;
+                grid-row: 1/1;
+
+            }
+        }
+
+        @keyframes fondo {
+            from {
+                background-color: #ff00ff11;
+            }
+
+            to {
+                background-color: #0106165b;
+            }
+        }
+
+        span:nth-child(1) {
+            animation: mover 10s linear 1s infinite normal forwards;
+
+        }
+
+        span:nth-child(2) {
+            animation: mover 10s linear 4s infinite reverse forwards;
+        }
+
+        div {
+            animation: fondo 5s linear 1s infinite alternate forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <span>&#127757;</span>
+            <span>&#127769;</span>
+        </div>
+    </main>
+</body>
+
+</html>

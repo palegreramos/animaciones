@@ -1,0 +1,32 @@
+body {
+    background: radial-gradient(ellipse at center, rgba(252,234,187,1) 0%, rgba(252,205,77,0.75) 50%, rgba(248,181,0,0.75) 51%, rgba(251,223,147,0.5) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=1 );
+}
+h1 {
+    transform: rotate(-10deg);
+}
+
+@keyframes crecer {
+    from {transform: scale(1); border: 0 solid blue;}
+    to {transform: scale(1.2); border: 2px solid red;}
+  }
+
+@keyframes mover {
+    from {left: 0; top: 0;}
+    50% {left: 20vw; top: 20vh;}
+    to {left: 20vw; top: 40vh;}
+}
+
+  main img {
+      animation-name: crecer;
+      animation-duration: 9s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+footer img {
+    position: fixed;
+    animation: mover 5s infinite alternate-reverse;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    
+}
+

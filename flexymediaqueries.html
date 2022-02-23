@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Shizuru&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            font-family: Shizuru, 'Courier New', Helvetica, sans-serif;
+            font-size: 4vmax;
+            
+        }
+       
+        body {
+            margin: 0;
+        }
+
+        header,
+        main {
+            display: flex;
+        }
+
+        header img {
+            width: 15vmax;
+        }
+
+        figure {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: fit-content
+        }
+
+        figcaption {
+            text-align: center;
+        }
+
+        @media (orientation: portrait) {
+            body {
+                background-color: aqua;
+            }
+
+            header,
+            main {
+                flex-flow: column;
+            }
+
+            header,
+            main {
+                justify-content: center;
+                align-items: center;
+            }
+
+            figure {
+                width: 80%;
+                flex-flow: column;
+                font-size: 6vmax;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            img[alt="alt"] {
+                clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            }
+
+        }
+
+        @media (orientation: landscape) {
+            body {
+                background-color: yellow;
+            }
+
+            header,
+            main {
+                flex-flow: row;
+                justify-content: space-around;
+            }
+
+            main {
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            figure {transition: all 1s;font-size: 2vmax;}
+        figure:hover {
+            font-size: 4vmax;
+            
+        }
+            figure {
+                width: 30%;
+                /* border: 1px dotted salmon; */
+                border-radius: 1rem;
+                box-shadow: 1rem 1rem 1rem 0.5rem #fa80725e;
+                box-sizing: border-box;
+
+                flex-flow: row;
+            }
+
+            img[alt="alt"] {
+                clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+            }
+
+        }
+
+        @media (orientation: landscape) and (max-width: 500px) {
+            body {
+                background-color: red;
+            }
+
+            :root {
+                font-family: Lato, Arial, Helvetica, sans-serif;
+                font-size: 4vmax;
+            }
+        }
+    </style>
+    <title>Ejemplo de flex y media queries</title>
+</head>
+
+<body>
+    <header>
+        <img src="reloj.gif" alt="Logotipo de la empresa" width="100" loading="lazy">
+        <h1>Relojería Alegre</h1>
+    </header>
+    <main>
+        <figure>
+            <img src="reloj.gif" alt="reloj" width="100" loading="lazy">
+            <figcaption>Reloj</figcaption>
+        </figure>
+        <figure>
+            <img src="relojarena.gif" alt="reloj" width="100" loading="lazy">
+            <figcaption>Reloj de Arena</figcaption>
+        </figure>
+        <figure>
+            <img src="gráfico.gif" alt="reloj" width="100" loading="lazy">
+            <figcaption>Gráfico</figcaption>
+        </figure>
+        <figure>
+            <img src="lápiz.gif" alt="reloj" width="100" loading="lazy">
+            <figcaption>Lápiz</figcaption>
+        </figure>
+        <figure>
+            <img src="megáfono.gif" alt="megáfono" width="100" loading="lazy">
+            <figcaption>Megáfono</figcaption>
+        </figure>
+        <figure>
+            <img src="ordenador.gif" alt="ordenador" width="100" loading="lazy">
+            <figcaption>Ordenador</figcaption>
+        </figure>
+        <figure>
+            <img src="rueda.gif" alt="rueda" width="100" loading="lazy">
+            <figcaption>Rueda</figcaption>
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/200/300" alt="alt" width="100" loading="lazy">
+            <figcaption>Imagen picsum</figcaption>
+        </figure>
+    </main>
+</body>
+
+</html>

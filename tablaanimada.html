@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas y espacios</title>
+    <style>
+        @keyframes unir {
+            from {
+                border-spacing: 0rem 0rem;            
+            }
+            to {
+                border-spacing: 3rem 3rem;    
+            }
+        }
+        @keyframes radios {
+            from {border-radius: 0;   border: 0.1px dotted darkorchid;}
+            50% { border: 10px solid darkcyan; }
+            to {border-radius: 50%;  border: 5px dashed salmon;}
+            
+        }
+        table {
+            animation: unir 5s ease-in 2s infinite alternate forwards, radios 5s linear 2s infinite alternate forwards;
+            background-image: conic-gradient(red, yellow, green, blue, black);
+        }
+        td {
+            width: 10rem;
+            height: 10rem;
+            background-color: yellow;
+            animation: radios 5s linear 2s infinite alternate forwards;
+        }
+        body {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            height: 100vh;
+        }
+        .parar {
+            animation-play-state: paused;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            document.addEventListener('click', ()=>{
+                document.querySelectorAll('table,td').forEach(element => {
+                    element.classList.toggle("parar");
+                });
+
+            });
+            
+        });
+        
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+    
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+  
+        </tr>
+    </table>
+</body>
+</html>
